@@ -93,11 +93,11 @@ import { RouterLink } from '@angular/router';
           <br>
           <a href="/under-progress">Compound Interest Calculator</a>
           <br>
-          <a href="/under-progress">Salary Calculator</a>
+          <a routerLink="/salary-calculator">Salary Calculator</a>
           <br>
           <a href="/under-progress">Interest Rate Calculator</a>
           <br>
-          <a href="/under-progress">Sales Tax Calculator</a>
+          <a routerLink="/sales-tax-calculator">Sales Tax Calculator</a>
     
         </div>
     </div>

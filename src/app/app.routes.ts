@@ -35,6 +35,8 @@ import { InterestCalculator } from './interest-calculator/interest-calculator';
 import { PaymentCalculator } from './payment-calculator/payment-calculator';
 import { AmortizationCalculator } from './amortization-calculator/amortization-calculator';
 import { InflationCalculator } from './inflation-calculator/inflation-calculator';
+import { SalaryCalculator } from './salary-calculator/salary-calculator';
+import { SalesTaxCalculator } from './sales-tax-calculator/sales-tax-calculator';
 
 export const routes: Routes = [
   { path: 'simple-calculator', component: SimpleCalculator },
@@ -72,6 +74,8 @@ export const routes: Routes = [
   { path: 'payment-calculator', component: PaymentCalculator },
   {path: 'amortization-calculator', component: AmortizationCalculator},
   { path: 'inflation-calculator', component: InflationCalculator },
+  { path: 'salary-calculator', component: SalaryCalculator },
+  {path: 'sales-tax-calculator', component: SalesTaxCalculator},
   { path: '', redirectTo: 'hyperlinks', pathMatch: 'full' }, // default
   { path: '**', redirectTo: 'hyperlinks' } // fallback
 ];
