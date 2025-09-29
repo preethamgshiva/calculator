@@ -28,6 +28,13 @@ import { PregnencyCalculator } from './pregnency-calculator/pregnency-calculator
 import { PregnencyConceptionCalculator } from './pregnency-conception-calculator/pregnency-conception-calculator';
 import { DuedateCalculator } from './duedate-calculator/duedate-calculator';
 import { UnderProgress } from './under-progress/under-progress';
+import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
+import { LoanCalculator } from './loan-calculator/loan-calculator';
+import { AutoLoanCalculator } from './auto-loan-calculator/auto-loan-calculator';
+import { InterestCalculator } from './interest-calculator/interest-calculator';
+import { PaymentCalculator } from './payment-calculator/payment-calculator';
+import { AmortizationCalculator } from './amortization-calculator/amortization-calculator';
+import { InflationCalculator } from './inflation-calculator/inflation-calculator';
 
 export const routes: Routes = [
   { path: 'simple-calculator', component: SimpleCalculator },
@@ -57,7 +64,14 @@ export const routes: Routes = [
   {path: 'pregnency-conception-calculator', component: PregnencyConceptionCalculator},
   {path: 'duedate-calculator', component: DuedateCalculator},
   {path: 'under-progress', component: UnderProgress},
+  {path: 'mortgage-calculator', component: MortgageCalculator},
+  {path: 'loan-calculator', component: LoanCalculator},
   {path: 'hyperlinks', component: Hyperlinks},
+  {path: 'auto-loan-calculator', component: AutoLoanCalculator},
+  { path: 'interest-calculator', component: InterestCalculator },
+  { path: 'payment-calculator', component: PaymentCalculator },
+  {path: 'amortization-calculator', component: AmortizationCalculator},
+  { path: 'inflation-calculator', component: InflationCalculator },
   { path: '', redirectTo: 'hyperlinks', pathMatch: 'full' }, // default
   { path: '**', redirectTo: 'hyperlinks' } // fallback
 ];

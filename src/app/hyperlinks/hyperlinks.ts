@@ -69,23 +69,23 @@ import { RouterLink } from '@angular/router';
         </div>
         <div class="financial-calculator border border-2 p-2 m-1 w-100">
           <h5 class="p-2 bg-primary rounded">Financial Calculators</h5>
-          <a href="/under-progress">Mortgage Calculator</a>
+          <a routerLink="/mortgage-calculator">Mortgage Calculator</a>
           <br>
-          <a href="/under-progress">Loan Calculator</a>
+          <a routerLink="/loan-calculator">Loan Calculator</a>
           <br>
-          <a href="/under-progress">Auto Loan Calculator</a>
+          <a routerLink="/auto-loan-calculator">Auto Loan Calculator</a>
           <br>
-          <a href="/under-progress">Interest Calculator</a>
+          <a routerLink="/interest-calculator">Interest Calculator</a>
           <br>
-          <a href="/under-progress">Payment Calculator</a>
+          <a routerLink="/payment-calculator">Payment Calculator</a>
           <br>
           <a href="/under-progress">Retirement Calculator</a>
           <br>
-          <a href="/under-progress">Amortization Calculator</a>
+          <a routerLink="/amortization-calculator">Amortization Calculator</a>
           <br>
           <a href="/under-progress">Investment Calculator</a>
           <br>
-          <a href="/under-progress">Inflation Calculator</a>
+          <a routerLink="/inflation-calculator">Inflation Calculator</a>
           <br>
           <a href="/under-progress">Finance Calculator</a>
           <br>
