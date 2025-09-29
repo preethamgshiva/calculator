@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   imports: [ RouterLink],
   template: `
     <div class="calculators-type-container d-flex w-100 word-wrap" >
-        <div class="mathematical-calculator border border-2 p-2 m-1 w-100">
+        <div class="mathematical-calculator border border-2 p-4 m-1 w-100 rounded">
           <h5 class="p-2 bg-primary rounded">Math Calculators</h5>
           <a routerLink="/simple-calculator">Simple Calculator</a>
           <br>
@@ -25,7 +25,7 @@ import { RouterLink } from '@angular/router';
           <br>
 
         </div>
-        <div class="other-calculator border border-2 p-2 m-1 w-100">
+        <div class="other-calculator border border-2 p-4 m-1 w-100 rounded">
           <h5 class="p-2 bg-primary rounded">Other Calculators</h5>
           <a routerLink="/age-calculator">Age Calculator</a>
           <br>
@@ -46,7 +46,7 @@ import { RouterLink } from '@angular/router';
           <a routerLink="/conversion-calculator">Conversion Calculator</a>
           <br>
         </div>
-        <div class="fitness-calculator border border-2 p-2 m-1 w-100">
+        <div class="fitness-calculator border border-2 p-4 m-1 w-100 rounded">
           <h5 class="p-2 bg-primary rounded">Fitness and Health Calculators</h5>
             <a routerLink="/bmi-calculator">BMI Calculator</a>
             <br>
@@ -67,7 +67,7 @@ import { RouterLink } from '@angular/router';
             <a routerLink="/duedate-calculator">Due Date Calculator</a>
             <br>
         </div>
-        <div class="financial-calculator border border-2 p-2 m-1 w-100">
+        <div class="financial-calculator border border-2 p-4 pb-5 m-1 w-100 rounded">
           <h5 class="p-2 bg-primary rounded">Financial Calculators</h5>
           <a routerLink="/mortgage-calculator">Mortgage Calculator</a>
           <br>
