@@ -1,0 +1,20 @@
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.fraction1 input.input-box {
+  width: 5rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fraction-line {
+  width: 5rem;
+  height: 2px;
+  background-color: black;
+}
