@@ -79,23 +79,23 @@ import { RouterLink } from '@angular/router';
           <br>
           <a routerLink="/payment-calculator">Payment Calculator</a>
           <br>
-          <a href="/under-progress">Retirement Calculator</a>
+          <a routerLink="/under-progress">Retirement Calculator</a>
           <br>
           <a routerLink="/amortization-calculator">Amortization Calculator</a>
           <br>
-          <a href="/under-progress">Investment Calculator</a>
+          <a routerLink="/under-progress">Investment Calculator</a>
           <br>
           <a routerLink="/inflation-calculator">Inflation Calculator</a>
           <br>
-          <a href="/under-progress">Finance Calculator</a>
+          <a routerLink="/under-progress">Finance Calculator</a>
           <br>
-          <a href="/under-progress">Income Tax Calculator</a>
+          <a routerLink="/under-progress">Income Tax Calculator</a>
           <br>
-          <a href="/under-progress">Compound Interest Calculator</a>
+          <a routerLink="/under-progress">Compound Interest Calculator</a>
           <br>
           <a routerLink="/salary-calculator">Salary Calculator</a>
           <br>
-          <a href="/under-progress">Interest Rate Calculator</a>
+          <a routerLink="/under-progress">Interest Rate Calculator</a>
           <br>
           <a routerLink="/sales-tax-calculator">Sales Tax Calculator</a>
     
