@@ -20,6 +20,14 @@ import { LengthConverter } from './conversion-calculator/LengthConverter';
 import { BodyfatCalculator } from './bodyfat-calculator/bodyfat-calculator';
 import { IdealweightCalculator } from './idealweight-calculator/idealweight-calculator';
 import { PaceCalculator } from './pace-calculator/pace-calculator';
+import { TriangleCalculator } from './triangle-calculator/triangle-calculator';
+import { GradeCalculator } from './grade-calculator/grade-calculator';
+import { SubnetCalculator } from './subnet-calculator/subnet-calculator';
+import { CalorieCalculator } from './calorie-calculator/calorie-calculator';
+import { PregnencyCalculator } from './pregnency-calculator/pregnency-calculator';
+import { PregnencyConceptionCalculator } from './pregnency-conception-calculator/pregnency-conception-calculator';
+import { DuedateCalculator } from './duedate-calculator/duedate-calculator';
+import { UnderProgress } from './under-progress/under-progress';
 
 export const routes: Routes = [
   { path: 'simple-calculator', component: SimpleCalculator },
@@ -41,6 +49,14 @@ export const routes: Routes = [
   {path: 'length-converter', component: LengthConverter},
   {path: 'idealweight-calculator', component: IdealweightCalculator},
   {path: 'pace-calculator', component: PaceCalculator},
+  {path: 'triangle-calculator', component: TriangleCalculator},
+  {path: 'grade-calculator', component: GradeCalculator},
+  {path: 'subnet-calculator', component: SubnetCalculator},
+  {path: 'calorie-calculator', component: CalorieCalculator},
+  {path: 'pregnency-calculator', component: PregnencyCalculator},
+  {path: 'pregnency-conception-calculator', component: PregnencyConceptionCalculator},
+  {path: 'duedate-calculator', component: DuedateCalculator},
+  {path: 'under-progress', component: UnderProgress},
   {path: 'hyperlinks', component: Hyperlinks},
   { path: '', redirectTo: 'hyperlinks', pathMatch: 'full' }, // default
   { path: '**', redirectTo: 'hyperlinks' } // fallback
