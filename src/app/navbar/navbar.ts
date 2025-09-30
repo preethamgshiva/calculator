@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -7,10 +7,9 @@ import { filter } from 'rxjs/operators';
   selector: 'app-navbar',
   imports: [NgIf],
   template: `
-    <div class="bg-primary-subtle w-100 p-3">
-      <nav class="d-flex align-items-center pt-3 pb-1 position-relative">
+    <div class="bg-primary-subtle w-100 p-3 mb-3">
+      <nav class="d-flex align-items-center pt-3 pb-1 position-relative mb-3">
 
-        <!-- Back button only shows when NOT on / or /hyperlinks -->
         <button 
           *ngIf="!hideBackButton" 
           class="btn btn-secondary position-absolute start-0 ms-3" 
@@ -18,7 +17,6 @@ import { filter } from 'rxjs/operators';
 
         <h3 class="mx-auto mb-0">Calculator</h3>
 
-        <!-- Home button -->
         <button class="btn btn-primary position-absolute end-0 me-3" (click)="goHome()">Home</button>
       </nav>
     </div>

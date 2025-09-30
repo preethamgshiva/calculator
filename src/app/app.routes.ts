@@ -10,7 +10,6 @@ import { AgeCalculator } from './age-calculator/age-calculator';
 import { AreaVolumeCalculator } from './area-volume-calculator/area-volume-calculator';
 import { BmiCalculator } from './bmi-calculator/bmi-calculator';
 import { BmrCalculator } from './bmr-calculator/bmr-calculator';
-import path from 'path';
 import { DateCalculator } from './date-calculator/date-calculator';
 import { TimeCalculator } from './time-calculator/time-calculator';
 import { HoursCalculator } from './hours-calculator/hours-calculator';
