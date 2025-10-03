@@ -1,9 +1,21 @@
 <div class="page-container">
+  <nav class="tabs">
+    <button [class.active]="activeTab === 'math'" (click)="selectTab('math')">
+      Math Calculators
+    </button>
+    <button [class.active]="activeTab === 'financial'" (click)="selectTab('financial')">
+      Financial Calculators
+    </button>
+    <button [class.active]="activeTab === 'fitness'" (click)="selectTab('fitness')">
+      Fitness & Health Calculators
+    </button>
+    <button [class.active]="activeTab === 'other'" (click)="selectTab('other')">
+      Other Calculators
+    </button>
+  </nav>
 
-  <div class="calculators-grid">
-
-    <div class="calculator-card">
-      <h2 class="card-header">Math Calculators</h2>
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'math'">
       <ul class="links-list">
         <li><a routerLink="/simple-calculator">Simple Calculator</a></li>
         <li><a routerLink="/scientific-calculator">Scientific Calculator</a></li>
@@ -15,23 +27,7 @@
       </ul>
     </div>
 
-    <div class="calculator-card">
-      <h2 class="card-header">Other Calculators</h2>
-      <ul class="links-list">
-        <li><a routerLink="/age-calculator">Age Calculator</a></li>
-        <li><a routerLink="/date-calculator">Date Calculator</a></li>
-        <li><a routerLink="/time-calculator">Time Calculator</a></li>
-        <li><a routerLink="/hours-calculator">Hours Calculator</a></li>
-        <li><a routerLink="/gpa-calculator">GPA Calculator</a></li>
-        <li><a routerLink="/grade-calculator">Grade Calculator</a></li>
-        <li><a routerLink="/area-volume-calculator">Area and Volume Calculator</a></li>
-        <li><a routerLink="/subnet-calculator">Subnet Calculator</a></li>
-        <li><a routerLink="/conversion-calculator">Conversion Calculator</a></li>
-      </ul>
-    </div>
-
-    <div class="calculator-card">
-      <h2 class="card-header">Fitness & Health</h2>
+    <div *ngIf="activeTab === 'fitness'">
       <ul class="links-list">
         <li><a routerLink="/bmi-calculator">BMI Calculator</a></li>
         <li><a routerLink="/calorie-calculator">Calorie Calculator</a></li>
@@ -45,8 +41,7 @@
       </ul>
     </div>
 
-    <div class="calculator-card">
-      <h2 class="card-header">Financial Calculators</h2>
+    <div *ngIf="activeTab === 'financial'">
       <ul class="links-list">
         <li><a routerLink="/mortgage-calculator">Mortgage Calculator</a></li>
         <li><a routerLink="/loan-calculator">Loan Calculator</a></li>
@@ -61,5 +56,18 @@
       </ul>
     </div>
 
+    <div *ngIf="activeTab === 'other'">
+      <ul class="links-list">
+        <li><a routerLink="/age-calculator">Age Calculator</a></li>
+        <li><a routerLink="/date-calculator">Date Calculator</a></li>
+        <li><a routerLink="/time-calculator">Time Calculator</a></li>
+        <li><a routerLink="/hours-calculator">Hours Calculator</a></li>
+        <li><a routerLink="/gpa-calculator">GPA Calculator</a></li>
+        <li><a routerLink="/grade-calculator">Grade Calculator</a></li>
+        <li><a routerLink="/area-volume-calculator">Area and Volume Calculator</a></li>
+        <li><a routerLink="/subnet-calculator">Subnet Calculator</a></li>
+        <li><a routerLink="/conversion-calculator">Conversion Calculator</a></li>
+      </ul>
+    </div>
   </div>
 </div>

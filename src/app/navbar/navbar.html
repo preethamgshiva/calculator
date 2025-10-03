@@ -1,1 +1,23 @@
-<p>navbar works!</p>
+<div class="navbar-container">
+  <nav class="navbar">
+
+    <div class="nav-section left">
+      <button *ngIf="!hideBackButton" class="nav-button" (click)="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <span>Back</span>
+      </button>
+    </div>
+
+    <div class="nav-section center">
+      <h1 class="page-title">{{ pageTitle }}</h1>
+    </div>
+
+    <div class="nav-section right">
+      <button class="nav-button" (click)="goHome()">
+        <span>Home</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </button>
+    </div>
+
+  </nav>
+</div>
