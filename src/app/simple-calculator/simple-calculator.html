@@ -1,1 +1,31 @@
-<p>simple-calculator works!</p>
+<div class="calculator">
+  <div class="display">
+    <span>{{ display }}</span>
+  </div>
+
+  <div class="buttons-container">
+    <button class="btn utility" (click)="clearDisplay()">AC</button>
+    <button class="btn utility" (click)="toggleSign()">+/-</button>
+    <button class="btn utility" (click)="setPercentage()">%</button>
+    <button class="btn operator" (click)="setValue('÷')">÷</button>
+
+    <button class="btn number" (click)="setValue('7')">7</button>
+    <button class="btn number" (click)="setValue('8')">8</button>
+    <button class="btn number" (click)="setValue('9')">9</button>
+    <button class="btn operator" (click)="setValue('×')">×</button>
+
+    <button class="btn number" (click)="setValue('4')">4</button>
+    <button class="btn number" (click)="setValue('5')">5</button>
+    <button class="btn number" (click)="setValue('6')">6</button>
+    <button class="btn operator" (click)="setValue('-')">-</button>
+
+    <button class="btn number" (click)="setValue('1')">1</button>
+    <button class="btn number" (click)="setValue('2')">2</button>
+    <button class="btn number" (click)="setValue('3')">3</button>
+    <button class="btn operator" (click)="setValue('+')">+</button>
+
+    <button class="btn number zero" (click)="setValue('0')">0</button>
+    <button class="btn number" (click)="setValue('.')">.</button>
+    <button class="btn operator" (click)="evaluate()">=</button>
+  </div>
+</div>

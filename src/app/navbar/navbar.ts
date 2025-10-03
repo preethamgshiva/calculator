@@ -24,6 +24,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./navbar.css']
 })
 export class Navbar {
+title = 'Calculator'
+
   hideBackButton = false;
 
   constructor(private router: Router) {

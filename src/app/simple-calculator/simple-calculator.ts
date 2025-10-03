@@ -1,65 +1,90 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-simple-calculator',
-  imports: [],
-  template: `
-  <div class="container">
-      <div>
-        <input type="none" value="{{display}}">
-      </div>
-      <div class="buttons-container">
-          <div class="row1">
-            <button (click)="setValue('7')">7</button>
-            <button (click)="setValue('8')">8</button>
-            <button (click)="setValue('9')">9</button>
-            <button (click)="setValue('+')">+</button>
-          </div>
-          <div class="row2">
-            <button (click)="setValue('4')">4</button>
-            <button (click)="setValue('5')">5</button>
-            <button (click)="setValue('6')">6</button>
-            <button (click)="setValue('-')">-</button>
-          </div>
-          <div class="row3">
-            <button (click)="setValue('1')">1</button>
-            <button (click)="setValue('2')">2</button>
-            <button (click)="setValue('3')">3</button>
-            <button (click)="setValue('*')">*</button>
-          </div>
-          <div class="row4">
-            <button class="zero" (click)="setValue('0')">0</button>
-            <button (click)="setValue('.')">.</button>
-            <button (click)="setValue('/')">/</button>
-          </div>
-          <div class="row5">
-            <button (click)="clearDisplay()">Clear</button>
-            <button (click)="evaluate()">=</button>
-          </div>
-      </div>
-    </div>
-  `,
+  templateUrl: './simple-calculator.html',
   styleUrl: './simple-calculator.css'
 })
 export class SimpleCalculator {
-    display = '';
-  setValue(val: string){
-    this.display = this.display+=val
-    console.log(this.display)
-  }
+  display: string = '0';
 
-  evaluate(){
-    try{
-      this.display = eval(this.display)
+  setValue(val: string) {
+    if (this.display === '0' || this.display === 'Error') {
+      this.display = val;
+    } else {
+      this.display += val;
     }
-    catch(e){
-      this.display = 'Error'
+  }
+
+  toggleSign() {
+    if (this.display !== '0' && this.display !== 'Error') {
+      if (!isNaN(parseFloat(this.display))) {
+        this.display = (parseFloat(this.display) * -1).toString();
+      }
     }
-    console.log(this.display)
   }
 
-  clearDisplay(){
-    this.display = ''
+  setPercentage() {
+    if (this.display !== 'Error') {
+      if (!isNaN(parseFloat(this.display))) {
+        this.display = (parseFloat(this.display) / 100).toString();
+      }
+    }
   }
 
+  evaluate() {
+    try {
+      const expression = this.display
+        .replace(/×/g, '*')
+        .replace(/÷/g, '/');
+
+      const result = new Function('return ' + expression)();
+      
+      if (isNaN(result) || !isFinite(result)) {
+        this.display = 'Error';
+      } else {
+        this.display = parseFloat(result.toPrecision(12)).toString();
+      }
+    } catch (e) {
+      this.display = 'Error';
+    }
+  }
+
+  clearDisplay() {
+    this.display = '0';
+  }
+
+  deleteLast() {
+    if (this.display.length > 1 && this.display !== 'Error') {
+      this.display = this.display.slice(0, -1);
+    } else {
+      this.display = '0';
+    }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    const key = event.key;
+
+    if (!isNaN(Number(key))) {
+      this.setValue(key);
+    } else if (['+', '-', '*', '/', '.', '%'].includes(key)) {
+      if (key === '*') {
+        this.setValue('×');
+      } else if (key === '/') {
+        this.setValue('÷');
+      } else {
+        this.setValue(key);
+      }
+    } else if (key === 'Enter' || key === '=') {
+      this.evaluate();
+    } else if (key === 'Backspace') {
+      this.deleteLast();
+    } else if (key.toLowerCase() === 'c') {
+      this.clearDisplay();
+    }
+    else if (key === 'Escape') {
+      this.display = '0';
+    }
+  }
 }
