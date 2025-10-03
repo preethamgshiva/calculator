@@ -74,7 +74,7 @@ export const routes: Routes = [
   { path: 'inflation-calculator', component: InflationCalculator, data: { title: 'Inflation Calculator' } },
   { path: 'salary-calculator', component: SalaryCalculator, data: { title: 'Salary Calculator' } },
   { path: 'sales-tax-calculator', component: SalesTaxCalculator, data: { title: 'Sales Tax Calculator' } },
-  { path: 'hyperlinks', component: Hyperlinks, data: { title: 'Hyperlinks' } },
+  { path: 'hyperlinks', component: Hyperlinks, data: { title: 'Calculator Project' } },
   { path: '', redirectTo: 'hyperlinks', pathMatch: 'full' },
   { path: '**', redirectTo: 'hyperlinks' }
 ];

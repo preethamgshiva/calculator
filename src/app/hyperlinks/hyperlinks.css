@@ -1,15 +1,95 @@
-a{
-    text-decoration: none;
-    font-size: 1rem;
+:host {
+  display: block;
+  background-color: #f4f7f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-a:hover{
-    animation: hover 1s ease-in-out;
-    color: var(--gray-900);
-    text-decoration: underline;
-    font-size: 1.18rem;
-    margin-left: 10px;
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem; 
 }
-p{
-    color: black;
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+.calculators-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.calculator-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07), 0 20px 40px rgba(0, 0, 0, 0.07);
+}
+
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(45deg, #8fb2d9, #afdbd3);
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.links-list {
+  list-style: none;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.links-list li a {
+  display: block;
+  padding: 0.75rem 0;
+  color: #2d3748;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.links-list li:last-child a {
+  border-bottom: none;
+}
+
+.links-list li a:hover {
+  color: #4a90e2;
+  background-color: #f8fafc;
+}
+
+
+@media (min-width: 768px) {
+  .calculators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .calculators-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header h1 {
+    font-size: 3rem;
+  }
 }
