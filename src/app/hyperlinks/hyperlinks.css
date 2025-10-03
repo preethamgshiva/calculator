@@ -10,12 +10,11 @@
   padding: 2rem 1.2rem;
 }
 
-/* Tab navigation styles */
 .tabs {
   display: flex;
-  flex-wrap: wrap; /* Allows tabs to wrap on smaller screens */
+  flex-wrap: wrap;
   border-bottom: 1px solid #dee2e6;
-  margin-bottom: -1px; /* Overlaps the content border */
+  margin-bottom: -1px;
 }
 
 .tabs button {
@@ -39,10 +38,9 @@
   color: #0d6efd;
   font-weight: 600;
   background-color: #ffffff;
-  border-color: #dee2e6 #dee2e6 #ffffff; /* Top, right/left, bottom */
+  border-color: #dee2e6 #dee2e6 #ffffff;
 }
 
-/* Tab content panel */
 .tab-content {
   background-color: #ffffff;
   padding: 2rem;

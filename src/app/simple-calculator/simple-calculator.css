@@ -22,7 +22,7 @@ html, body {
 .calculator {
   width: 90vw;
   max-width: 400px;
-  background-color: #000;
+  background-color: #0a2436;
   border-radius: 30px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,9 @@ html, body {
 }
 
 .display {
-  color: #fff;
+  color: #ffffff;
+  background-color: #164465;
+  border-radius: 20px;
   font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 300;
   text-align: right;
@@ -70,7 +72,7 @@ html, body {
   filter: brightness(1.2);
 }
 
-.number { background-color: #333; }
+.number { background-color: #005db2 }
 .utility { background-color: #a5a5a5; color: #000; }
 .operator { background-color: #f1a33c; font-size: clamp(1.2rem, 6vw, 2rem); }
 

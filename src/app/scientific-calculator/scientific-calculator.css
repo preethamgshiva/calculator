@@ -12,11 +12,10 @@
   box-sizing: border-box;
 }
 
-/* Main calculator container */
 .calculator {
   width: 100%;
   max-width: 400px;
-  background-color: #000;
+  background-color: #0a2436;
   border-radius: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -24,9 +23,10 @@
   overflow: hidden;
 }
 
-/* Display screen */
 .display {
   color: #fff;
+  background-color: #164465;
+  border-radius: 0px;
   font-size: clamp(2rem, 12vw, 3.5rem);
   font-weight: 300;
   text-align: right;
@@ -38,23 +38,29 @@
   word-break: break-all;
 }
 
-.display span {
-  max-width: 100%;
+.display {
+  color: #ffffff;
+  background-color: #164465;
+  border-radius: 20px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 300;
+  text-align: right;
+  padding: 10px 5px;
+  min-height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   overflow: hidden;
-  text-overflow: ellipsis;
+  flex-shrink: 0;
 }
 
-/* Grid container for all buttons */
 .buttons-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* --- KEY CHANGE HERE --- */
-  /* Increased bottom padding to 35px for more space */
   padding: 20px 20px 40px;
   gap: 14px;
 }
 
-/* Base button styles */
 .btn {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -72,8 +78,7 @@
   filter: brightness(1.4);
 }
 
-/* Button type color styles */
-.number { background-color: #333; }
+.number { background-color: #005db2; }
 .utility { background-color: #a5a5a5; color: #000; }
 .operator { background-color: #f1a33c; }
 
