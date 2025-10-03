@@ -15,7 +15,7 @@
 .calculator {
   width: 100%;
   max-width: 400px;
-  background-color: #0a2436;
+  background-color: #000000;
   border-radius: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -24,24 +24,9 @@
 }
 
 .display {
-  color: #fff;
-  background-color: #164465;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 0px;
-  font-size: clamp(2rem, 12vw, 3.5rem);
-  font-weight: 300;
-  text-align: right;
-  min-height: 120px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 20px;
-  word-break: break-all;
-}
-
-.display {
-  color: #ffffff;
-  background-color: #164465;
-  border-radius: 20px;
   font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 300;
   text-align: right;
@@ -66,7 +51,7 @@
   border-radius: 50%;
   border: none;
   font-size: clamp(0.9rem, 4vw, 1.4rem);
-  color: #fff;
+  color: #000000;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -78,7 +63,7 @@
   filter: brightness(1.4);
 }
 
-.number { background-color: #005db2; }
+.number { background-color: #ffffff; }
 .utility { background-color: #a5a5a5; color: #000; }
 .operator { background-color: #f1a33c; }
 

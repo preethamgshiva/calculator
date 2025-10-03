@@ -1,20 +1,123 @@
-.calculator-container {
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.calculator-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* --- Result Display --- */
+.result-display {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+.placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* --- Input Panel --- */
+.input-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fraction-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  text-align: center;
 }
 
-.fraction1 input.input-box {
-  width: 5rem;
-  height: 2rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.input-box {
+  width: 70px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #0d6efd;
 }
 
-.fraction-line {
-  width: 5rem;
+.input-box:focus {
+  outline: none;
+}
+
+.fraction-input .fraction-line {
   height: 2px;
-  background-color: black;
+  width: 70px;
+  background-color: #ced4da;
+  margin: 4px 0;
+}
+
+.operator-select .form-select {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+  border-width: 2px;
+}
+
+
+/* --- Button --- */
+.button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-calculate {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-image: linear-gradient(45deg, #0d6efd, #0dcaf0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-calculate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+  .input-panel {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }

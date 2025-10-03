@@ -22,7 +22,7 @@ html, body {
 .calculator {
   width: 90vw;
   max-width: 400px;
-  background-color: #0a2436;
+  background-color: #000000;
   border-radius: 30px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -32,8 +32,8 @@ html, body {
 }
 
 .display {
-  color: #ffffff;
-  background-color: #164465;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 20px;
   font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 300;
@@ -60,7 +60,7 @@ html, body {
   border-radius: 50%;
   border: none;
   font-size: clamp(1rem, 5vw, 1.5rem);
-  color: #fff;
+  color: #000000;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -72,7 +72,7 @@ html, body {
   filter: brightness(1.2);
 }
 
-.number { background-color: #005db2 }
+.number { background-color: #ffffff }
 .utility { background-color: #a5a5a5; color: #000; }
 .operator { background-color: #f1a33c; font-size: clamp(1.2rem, 6vw, 2rem); }
 

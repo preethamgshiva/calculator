@@ -1,1 +1,35 @@
-<p>fraction-calculator works!</p>
+<div class="calculator-card">
+  <h3 class="card-title">Fraction Calculator</h3>
+
+  <div class="result-display">
+    <span *ngIf="result !== null" class="decimal-result">{{ result }}</span>
+    <span *ngIf="result === null" class="placeholder">Result will be shown here</span>
+  </div>
+
+  <div class="input-panel">
+    <div class="fraction-input">
+      <input type="number" [(ngModel)]="num1" class="input-box numerator">
+      <div class="fraction-line"></div>
+      <input type="number" [(ngModel)]="den1" class="input-box denominator">
+    </div>
+
+    <div class="operator-select">
+      <select class="form-select" [(ngModel)]="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select>
+    </div>
+
+    <div class="fraction-input">
+      <input type="number" [(ngModel)]="num2" class="input-box numerator">
+      <div class="fraction-line"></div>
+      <input type="number" [(ngModel)]="den2" class="input-box denominator">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="btn-calculate" (click)="calculate()">Calculate</button>
+  </div>
+</div>
