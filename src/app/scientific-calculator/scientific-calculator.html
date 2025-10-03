@@ -1,1 +1,41 @@
-<p>scientific-calculator works!</p>
+<div class="calculator">
+  <div class="display">
+    <span>{{ display }}</span>
+  </div>
+
+  <div class="buttons-container">
+    <button class="btn utility" (click)="append('(')">(</button>
+    <button class="btn utility" (click)="append(')')">)</button>
+    <button class="btn utility" (click)="append('Math.PI')">π</button>
+    <button class="btn utility" (click)="clear()">C</button>
+    <button class="btn utility" (click)="backspace()">DEL</button>
+
+    <button class="btn utility" (click)="append('Math.sin(')">sin</button>
+    <button class="btn utility" (click)="append('Math.cos(')">cos</button>
+    <button class="btn utility" (click)="append('Math.tan(')">tan</button>
+    <button class="btn utility" (click)="append('Math.log10(')">log</button>
+    <button class="btn operator" (click)="append('**')">^</button>
+
+    <button class="btn number" (click)="append('7')">7</button>
+    <button class="btn number" (click)="append('8')">8</button>
+    <button class="btn number" (click)="append('9')">9</button>
+    <button class="btn operator" (click)="append('/')">÷</button>
+    <button class="btn operator" (click)="append('Math.sqrt(')">√</button>
+
+    <button class="btn number" (click)="append('4')">4</button>
+    <button class="btn number" (click)="append('5')">5</button>
+    <button class="btn number" (click)="append('6')">6</button>
+    <button class="btn operator" (click)="append('*')">×</button>
+    <button class="btn operator" (click)="append('%')">%</button>
+    
+    <button class="btn number" (click)="append('1')">1</button>
+    <button class="btn number" (click)="append('2')">2</button>
+    <button class="btn number" (click)="append('3')">3</button>
+    <button class="btn operator" (click)="append('-')">−</button>
+    <button class="btn operator" (click)="append('+')">+</button>
+
+    <button class="btn number zero" (click)="append('0')">0</button>
+    <button class="btn number" (click)="append('.')">.</button>
+    <button class="btn operator equal" (click)="calculate()">=</button>
+  </div>
+</div>

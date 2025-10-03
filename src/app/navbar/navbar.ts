@@ -1,6 +1,6 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -15,7 +15,7 @@ import { filter } from 'rxjs/operators';
           class="btn btn-secondary position-absolute start-0 ms-3" 
           (click)="goBack()">Back</button>
 
-        <h3 class="mx-auto mb-0">Calculator</h3>
+        <h3 class="mx-auto mb-0">{{ pageTitle }}</h3>
 
         <button class="btn btn-primary position-absolute end-0 me-3" (click)="goHome()">Home</button>
       </nav>
@@ -24,18 +24,29 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./navbar.css']
 })
 export class Navbar {
-title = 'Calculator'
-
+  pageTitle = '';
   hideBackButton = false;
 
-  constructor(private router: Router) {
-    // Listen for navigation changes
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        const currentUrl = event.urlAfterRedirects;
+      .subscribe(() => {
+        const childRoute = this.getChild(this.activatedRoute);
+
+        childRoute.data.subscribe((data) => {
+          this.pageTitle = data['title'] || 'Calculator';
+        });
+
+        const currentUrl = this.router.url;
         this.hideBackButton = currentUrl === '/' || currentUrl === '/hyperlinks';
       });
+  }
+
+  private getChild(route: ActivatedRoute): ActivatedRoute {
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+    return route;
   }
 
   goHome() {
